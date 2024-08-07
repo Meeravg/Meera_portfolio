@@ -4,6 +4,76 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    color: white;
+}
+
+
+@media all and (min-width:300px) and (max-width: 1268px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 25%;
+        background: #cfcece;
+        color: 1px solid ;
+    }
+    
+    .navigation.active {
+        display: flex;
+        margin-left:600px ;
+    }
+    .navigation.active a{
+        color: black;
+        margin: auto;
+    }
+    .hamburger {
+        display: flex;
+        color: white;
+    }
+    .btn-group{
+        display: none;
+    }
+    .photo{
+        height: auto;
+        width: auto;
+    }
+    .personal_info{
+        font-size:small;
+    }
+    .Stack{
+        display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap :10px;
+        
+    }
+    .tools{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .projectSection{
+       grid-template-columns: repeat(1,1fr);
+    }
+}
+
 header {
     position: fixed;
     top: 0;
@@ -156,17 +226,11 @@ header {
     width:400px;
 }
 .Stack{
-    display: flex;
-    height: 300px;
-    width: 95%;
-    /* border: 1px solid black; */
-    justify-content: space-evenly;
-    
-}
-.Stack > div{
-    height: 100px;
-    width: 40px;
-} 
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(5,1fr);
+    gap:20px;
+  }
 h3{
     margin-left: 60px;
     margin-top: 10px;
@@ -177,22 +241,15 @@ h3{
     font-size: 45px;
 }
 .tools{
-    display: flex;
-    height: 300px;
-    width: 95%;
-    /* border: 1px solid black; */
-    justify-content: space-evenly;
- 
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
-.tools > div{
-    height: 100px;
-    width: 40px;
-} 
+
 h3{
     margin-left: 60px;
     margin-top: 10px;
 }
-
 .projectSection{
     display: grid;
     grid-template-columns: repeat(2,1fr);
